@@ -60,11 +60,12 @@ var students = [
 // console.log(students[2]);
 
 
-for (var propriety in students) {
+for (var property in students) {
  
-  var studentName = students[propriety].name;
-  console.log(students[propriety].name);
-  console.log(students[propriety].lastName);
+  var studentName = students[property].name;
+  console.log(studentName);
+  var studentLastName = students[property].lastName;
+  console.log(studentLastName);
 }
 
 
@@ -74,5 +75,22 @@ for (var propriety in students) {
 
 
 
+var userName = prompt('Insert your name');
+var userLastName = prompt('Insert your lastname');
+var userAge = prompt('Insert your age');
+
+
+var newUser = {
+  'name' : userName,
+  'lastName' : userLastName,
+  'age' : userAge,
+};
+
+
+console.log(newUser);
+
+
+students.push(newUser);
+console.log(students);
 
 });
