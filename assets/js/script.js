@@ -103,7 +103,14 @@ console.log(students);
 for (var i = 0; i < students.length; i++){
 
 $("#lista").append(
-  "<li> " + students[i].name + students[i].lastName + students[i].age + "</li>"
+  "<li> " +
+    "" +
+     students[i].name + " " +
+     students[i].lastName +
+    " " +
+     students[i].age +
+    " " +
+    "</li>"
 );
 
 }
