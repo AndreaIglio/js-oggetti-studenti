@@ -24,11 +24,9 @@ var student = {
 
 }
 
-console.log(student);
 
-
-for (var property in student) {
-  console.log(student[property]);
+for (var key in student) {
+  console.log(student[key]);
   
 }
 
@@ -59,14 +57,19 @@ var students = [
 // console.log(students[1]);
 // console.log(students[2]);
 
+for (var i = 0; i < students.length; i++){
 
-for (var property in students) {
- 
-  var studentName = students[property].name;
-  console.log(studentName);
-  var studentLastName = students[property].lastName;
-  console.log(studentLastName);
-}
+  console.log(students[i].name);
+     console.log(students[i].lastName);
+     console.log(students[i].age);
+
+ }
+
+// for (var i = 0; i < students.length; i++) {
+//   for (var key in students[i]) {
+//     console.log(students[i][key]);
+//   }
+// }
 
 
 
@@ -81,9 +84,9 @@ var userAge = prompt('Insert your age');
 
 
 var newUser = {
-  'name' : userName,
-  'lastName' : userLastName,
-  'age' : userAge,
+  name : userName,
+  lastName : userLastName,
+  age : userAge,
 };
 
 
@@ -92,5 +95,16 @@ console.log(newUser);
 
 students.push(newUser);
 console.log(students);
+
+
+// TASK BONUS stampa in html la lista
+
+for (var i = 0; i < students.length; i++){
+
+document.getElementById('lista').innerHTML =
+
+document.getElementById('lista').innerHTML + "<li> " + students[i].name + students[i].lastName + students[i].age + "</li>";
+}
+
 
 });
