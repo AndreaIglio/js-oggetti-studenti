@@ -16,19 +16,19 @@ $(function () {
 // Istruzioni:
 //TASK 1 Creare un oggetto che descriva uno studente con le seguenti proprietà: nome, cognome e età. Stampare a schermo attraverso il for in tutte le proprietà.
 
-var student = {
+// var student = {
 
-  name : 'Ajeje',
-  lastName : 'Brazorf',
-  age: 99,
+//   name : 'Ajeje',
+//   lastName : 'Brazorf',
+//   age: 99,
 
-}
+// }
 
 
-for (var key in student) {
-  console.log(student[key]);
+// for (var key in student) {
+//   console.log(student[key]);
   
-}
+// }
 
 //TASK 2 Creare un array di oggetti di studenti. Ciclare su tutti gli studenti e stampare per ognuno nome e cognome
 
@@ -60,8 +60,8 @@ var students = [
 for (var i = 0; i < students.length; i++){
 
   console.log(students[i].name);
-     console.log(students[i].lastName);
-     console.log(students[i].age);
+  console.log(students[i].lastName);
+  console.log(students[i].age);
 
  }
 
@@ -99,12 +99,15 @@ console.log(students);
 
 // TASK BONUS stampa in html la lista
 
+
 for (var i = 0; i < students.length; i++){
 
-document.getElementById('lista').innerHTML =
+$("#lista").append(
+  "<li> " + students[i].name + students[i].lastName + students[i].age + "</li>"
+);
 
-document.getElementById('lista').innerHTML + "<li> " + students[i].name + students[i].lastName + students[i].age + "</li>";
 }
+
 
 
 });
